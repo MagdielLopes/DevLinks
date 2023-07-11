@@ -4,3 +4,23 @@
     box-sizing: border-box;
 }
 
+img{
+    height: 112px;
+    width: 112px;
+    border-radius: 999px;
+}
+
+button{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 0;
+    background: white url(./assets/MoonStars.svg) no-repeat center;
+}
+
+span{
+    display: block;
+    height: 24px;
+    width: 64px;
+    border-radius: 9999px;
+}
