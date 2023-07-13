@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Inter', sans-serif;
 }
 
 :root{
@@ -26,8 +26,9 @@
     --highlight-color: rgba(0, 0, 0, 0.1);
     --button-theme: url(./assets/Sun.svg);
 }
+
 .Light button{
-    right: 0;
+    animation: slide-in 0.2s forwards;
 }
 
 body{
@@ -57,10 +58,12 @@ img{
     width: 112px;
     margin: 0 auto;
     border-radius: 999px;
+    outline: 2px solid var(--stroke-color);
 }
 
 p{
     margin-top: 8px;
+    font-size: 14px;
 }
 
 /* switch */
@@ -76,9 +79,12 @@ button{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    left: 0;
     background: white var(--button-theme) no-repeat center;
     border-radius: 50%;
     border: 0;
+
+    animation: slide-out 0.2s;
 }
 
 button:hover{
@@ -166,4 +172,18 @@ footer{
     .Light{
         --bg-url: url(./assets/Background-light.jpg);
     }
+}
+
+/* animation */
+
+@keyframes slide-in {
+    from {left: 0;}
+    to {left: 50%;}
+}
+
+@keyframes slide-out {
+
+    from {left: 50%;}
+    to {left: 0;}
+
 }
